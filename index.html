@@ -1,49 +1,344 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="sr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MK mont | Vodovod, kanalizacija, grejanje i keramika</title>
-<meta name="description" content="MK mont – vodovod, kanalizacija, grejanje, keramika i kompletna rekonstrukcija kupatila. Subotica.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MK MONT - Vodovod, Grejanje, Keramika</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#17202a;background:#f6f8fa;line-height:1.6}
-header{background:#111820;color:white;position:sticky;top:0;z-index:10}.nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:20px}.logo{font-size:28px;font-weight:800;letter-spacing:.5px}.logo span{color:#e22b2b}nav a{color:white;text-decoration:none;margin-left:18px;font-weight:600}
-.hero{background:linear-gradient(135deg,#101820,#173d63);color:white;padding:90px 20px}.hero-inner{max-width:1100px;margin:auto}.hero h1{font-size:48px;line-height:1.1;margin:0 0 18px}.hero p{font-size:21px;max-width:720px}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:13px 22px;border-radius:8px;text-decoration:none;font-weight:700}.primary{background:#e22b2b;color:white}.secondary{border:1px solid white;color:white}
-section{max-width:1100px;margin:auto;padding:65px 20px}h2{text-align:center;font-size:34px;margin:0 0 35px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border-radius:12px;padding:25px;box-shadow:0 5px 20px #00000010}.card h3{margin-top:0;color:#173d63}
-.about{background:white;max-width:none}.about-inner{max-width:1100px;margin:auto;padding:65px 20px}.contact{background:#173d63;color:white;max-width:none}.contact-inner{max-width:1100px;margin:auto;padding:60px 20px;text-align:center}.contact a{color:white}.contact .btn{background:#e22b2b;border:0;margin:8px}
-footer{background:#111820;color:#ddd;text-align:center;padding:25px 20px}
-@media(max-width:760px){.nav{flex-direction:column;align-items:flex-start}nav a{margin:0 14px 0 0}.hero{padding:65px 20px}.hero h1{font-size:36px}.grid{grid-template-columns:1fr}h2{font-size:29px}}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 15px 20px;
+}
+
+.nav {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e31b23;
+}
+
+.hero {
+    background: linear-gradient(135deg, #111 0%, #1b3d70 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-red {
+    background: #e31b23;
+    color: white;
+}
+
+.btn-blue {
+    background: #1677c8;
+    color: white;
+}
+
+.btn-white {
+    background: white;
+    color: #111;
+}
+
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 35px;
+    color: #111;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-top: 4px solid #1677c8;
+}
+
+.service h3 {
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.about {
+    background: #111;
+    color: white;
+    max-width: none;
+}
+
+.about-content {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    color: white;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-info a {
+    color: #1677c8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 800px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+}
 </style>
 </head>
+
 <body>
-<header><div class="nav"><div <span>mont</span></div><nav><a href="#usluge">Usluge</a><a href="#o-nama">O nama</a><a href="#kontakt">Kontakt</a></nav></div></header>
 
-<main>
-<section class="hero"><div class="hero-inner">
-<div class="logo"><img src="1000030345.png" alt="MK Mont logo"></div>
-<h1>MK MONT</h1>
-<p>Kompletna rekonstrukcija kupatila i završni radovi. Kvalitetna i pouzdana usluga na jednom mestu  za vaš dom.</p>
-<div class="buttons"><a class="btn primary" href="tel:0691410920">Pozovite: 069 141 0920</a><a class="btn secondary" href="#usluge">Pogledajte usluge</a></div>
-</div></section>
+<header>
+    <div class="nav">
 
-<section id="usluge"><h2>Naše usluge</h2><div class="grid">
-<div class="card"><h3>Vodovod</h3><p>Ugradnja, zamena i popravka vodovodnih instalacija.</p></div>
-<div class="card"><h3>Kanalizacija</h3><p>Izrada i sanacija kanalizacionih instalacija i odvoda.</p></div>
-<div class="card"><h3>Grejanje</h3><p>Ugradnja i povezivanje sistema grejanja i radijatora.</p></div>
-<div class="card"><h3>Keramika</h3><p>Postavljanje zidnih i podnih pločica, fugovanje i završna obrada.</p></div>
-<div class="card"><h3>Rekonstrukcija kupatila</h3><p>Kompletna adaptacija kupatila od instalacija do završnih radova.</p></div>
-<div class="card"><h3>Završni radovi</h3><p>Precizna završna obrada i prilagođavanje rešenja vašem prostoru.</p></div>
-</div></section>
+        <div class="logo">
+            <img src="1000030345.png" alt="MK MONT logo">
+        </div>
 
-<div class="about"><div class="about-inner" id="o-nama"><h2>MK mont</h2><p>MK mont pruža usluge vodovoda, kanalizacije, grejanja i keramike, uz mogućnost kompletne rekonstrukcije kupatila. Radove organizujemo tako da na jednom mestu dobijete potrebne instalaterske i završne radove.</p></div></div>
+        <nav>
+            <a href="#usluge">Usluge</a>
+            <a href="#o-nama">O nama</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
 
-<section><h2>Zašto MK mont?</h2><div class="grid">
-<div class="card"><h3>Kompletno rešenje</h3><p>Više vrsta radova na jednom mestu.</p></div>
-<div class="card"><h3>Dogovor i planiranje</h3><p>Pre početka radova dogovaramo obim i potrebne zahvate.</p></div>
-<div class="card"><h3>Kontakt</h3><p>Jednostavno nas možete pozvati ili poslati email.</p></div>
-</div></section>
+    </div>
+</header>
 
-<div class="contact" id="kontakt"><div class="contact-inner"><h2>Kontaktirajte nas</h2><p><strong>MK mont – Subotica</strong></p><p>Telefon: <a href="tel:0691410920">069 141 0920</a><br>Email: <a href="mailto:mk.mont024@gmail.com">mk.mont024@gmail.com</a></p><a class="btn" href="tel:0691410920">Pozovite nas</a><a class="btn" href="mailto:mk.mont024@gmail.com">Pošaljite email</a></div></div>
-</main>
-<footer>© MK mont · Subotica</footer>
-</body></html>
+<section class="hero">
+
+    <h1>MK MONT</h1>
+
+    <p>
+        Kompletna rekonstrukcija kupatila i završni radovi.
+        Kvalitetna i pouzdana usluga na jednom mestu.
+    </p>
+
+    <div class="buttons">
+        <a class="btn btn-red" href="tel:0691410920">Pozovi: 069 141 0920</a>
+        <a class="btn btn-blue" href="#usluge">Naše usluge</a>
+        <a class="btn btn-white" href="#kontakt">Kontakt</a>
+    </div>
+
+</section>
+
+<section id="usluge">
+
+    <h2>Naše usluge</h2>
+
+    <div class="services">
+
+        <div class="service">
+            <h3>Vodovod</h3>
+            <p>Ugradnja, zamena i popravka vodovodnih instalacija.</p>
+        </div>
+
+        <div class="service">
+            <h3>Kanalizacija</h3>
+            <p>Izrada, zamena i popravka kanalizacionih instalacija.</p>
+        </div>
+
+        <div class="service">
+            <h3>Grejanje</h3>
+            <p>Ugradnja i povezivanje sistema grejanja i radijatora.</p>
+        </div>
+
+        <div class="service">
+            <h3>Keramika</h3>
+            <p>Postavljanje zidnih i podnih keramičkih pločica.</p>
+        </div>
+
+        <div class="service">
+            <h3>Rekonstrukcija kupatila</h3>
+            <p>Kompletna rekonstrukcija kupatila od početka do kraja.</p>
+        </div>
+
+        <div class="service">
+            <h3>Završna obrada</h3>
+            <p>Završni radovi i uređenje prostora po dogovoru.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="o-nama">
+
+    <div class="about-content">
+
+        <h2>O nama</h2>
+
+        <p>
+            MK MONT posluje od 2021. godine i pruža usluge
+            vodovoda, kanalizacije, grejanja, keramike i kompletne
+            rekonstrukcije kupatila.
+        </p>
+
+        <p>
+            Naš cilj je kvalitetno, pouzdano i profesionalno
+            izvođenje radova.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="contact" id="kontakt">
+
+    <h2>Kontakt</h2>
+
+    <div class="contact-info">
+
+        <p>
+            Telefon:
+            <a href="tel:0691410920">069 141 0920</a>
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:mk.mont024@gmail.com">
+                mk.mont024@gmail.com
+            </a>
+        </p>
+
+    </div>
+
+    <a class="btn btn-red" href="tel:0691410920">
+        Pozovi MK MONT
+    </a>
+
+</section>
+
+<footer>
+    <p>© 2026 MK MONT - Sva prava zadržana.</p>
+</footer>
+
+</body>
+</html>
