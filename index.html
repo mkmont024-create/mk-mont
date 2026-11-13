@@ -59,12 +59,17 @@ nav a:hover {
 }
 
 .hero {
-    background: #123f70;
+    background:
+    linear-gradient(135deg, #0b0b0b0%, #123f70 55%, #245a91 100%);
     color: white;
     text-align: center;
     padding: 95px 20px;
 }
-
+section.hero {
+    max-width: none;
+    width: 100%
+    box-sizing: border-box;
+}
 .hero h1 {
     font-size: 54px;
     font-weight: 800;
@@ -117,7 +122,7 @@ nav a:hover {
 }
 
 section {
-    max-width: 1100px;
+    max-width: 1400px;
     margin: auto;
     padding: 60px 20px;
 }
