@@ -50,6 +50,67 @@ body.lightbox-active{overflow:hidden}
 .hero-effects .fire-art{color:#fa2b16;width:clamp(240px,34vw,550px);height:100%;right:-8%;bottom:-12%;}
 .hero-layout,.hero-services{z-index:2}
 @media(max-width:760px){.hero-effects .water-art{left:-34%;width:85%;opacity:.62}.hero-effects .fire-art{right:-36%;width:85%;opacity:.6}.hero-layout,.hero-services{position:relative}}
+
+/* Nova pozadina MK MONT */
+.hero {
+  background-image: url("nova slika sajta.png");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-effects {
+  display: none;
+}
+
+/* Prikaz nove slike bez dupliranja sadržaja */
+.hero-layout,
+.hero-services {
+  visibility: hidden;
+}
+
+.hero {
+  aspect-ratio: 16 / 9;
+  min-height: 0;
+  padding: 0;
+  background-size: 100% 100%;
+}
+
+.hero-services {
+  margin-top: 0;
+}
+
+/* Klikabilne galerije preko slike */
+.hero {
+  position: relative;
+}
+
+.hero-services {
+  visibility: visible;
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: 9%;
+  height: 25%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1%;
+}
+
+.hero-services a {
+  display: block;
+  border: 0;
+  padding: 0;
+  font-size: 0;
+  opacity: 0;
+}
+
+.hero-services a span,
+.hero-services a strong,
+.hero-services a small {
+  display: none;
+}
+
 </style>
 </head>
 <body>
@@ -58,8 +119,30 @@ body.lightbox-active{overflow:hidden}
 <section class="hero" id="pocetna"><div class="hero-effects" aria-hidden="true">
 <svg class="water-art" viewBox="0 0 500 750" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="waterGlow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#83eaff"/><stop offset=".38" stop-color="#007aff"/><stop offset="1" stop-color="#002b9a"/></linearGradient></defs><path d="M-70 60 Q250 105 110 330 T190 710" fill="none" stroke="url(#waterGlow)" stroke-width="58" opacity=".3"/><path d="M-35 30 C280 140 35 265 135 390 S310 590 170 750" fill="none" stroke="url(#waterGlow)" stroke-width="23" opacity=".9"/><path d="M-65 180 C230 205 20 360 110 465 S250 630 95 765" fill="none" stroke="#4cdcff" stroke-width="8" opacity=".8"/><path d="M-80 310 C150 270 50 490 240 620" fill="none" stroke="#008dff" stroke-width="14" opacity=".7"/><g fill="#80eaff"><circle cx="110" cy="390" r="8"/><circle cx="173" cy="540" r="6"/><circle cx="85" cy="565" r="12"/><circle cx="210" cy="670" r="7"/><circle cx="55" cy="685" r="5"/><circle cx="138" cy="605" r="4"/></g></svg>
 <svg class="fire-art" viewBox="0 0 500 750" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="fireGlow" x1="0" y1="1" x2=".5" y2="0"><stop stop-color="#b10a09"/><stop offset=".42" stop-color="#f52710"/><stop offset=".72" stop-color="#ff8a12"/><stop offset="1" stop-color="#ffd35d"/></linearGradient></defs><path d="M505 770 L155 770 Q255 665 230 560 Q315 610 295 440 Q410 530 375 300 Q520 430 475 190 Q590 455 505 770Z" fill="url(#fireGlow)" opacity=".78"/><path d="M510 770 L295 770 Q390 675 348 580 Q420 630 418 460 Q490 575 490 380 Q560 565 510 770Z" fill="#ffb12a" opacity=".75"/><path d="M510 770 L400 770 Q465 700 445 615 Q505 670 495 555 Q555 670 510 770Z" fill="#fff0a2" opacity=".72"/><path d="M530 750 Q345 675 440 505 Q405 625 520 645" fill="none" stroke="#ff4a19" stroke-width="13" opacity=".85"/></svg>
-</div><div class="wrap hero-layout"><div class="hero-brand"><img src="mk-mont-logo.jpg" alt="MK MONT Subotica – vodovod, grejanje, keramika"/></div><div class="hero-contact"><div class="hero-contact-row"><span class="contact-symbol">☎</span><a href="tel:+381691410920">069 141 0920</a></div><div class="hero-contact-row"><span class="contact-symbol">✉</span><a href="mailto:mk.mont024@gmail.com">mk.mont024@gmail.com</a></div><div class="hero-contact-row"><span class="contact-symbol">⌖</span><span>SUBOTICA</span></div><p class="hero-slogan">Vaš dom<br>u sigurnim rukama!</p><div class="actions"><a class="btn btn-red" href="tel:+381691410920">Pozovite nas</a><a class="btn btn-outline" href="#radovi">Naši radovi</a></div></div></div><div class="wrap hero-services"><a href="#usluge"><span>💧</span><strong>VODOVOD</strong><small>Instalacije i popravke</small></a><a href="#usluge"><span>🔧</span><strong>KANALIZACIJA</strong><small>Izrada i sanacija</small></a><a href="#usluge"><span>♨</span><strong>GREJANJE</strong><small>Instalacija i servis</small></a><a href="#usluge"><span>▦</span><strong>KERAMIKA</strong><small>Postavljanje pločica</small></a></div></section>
-<section class="section section-soft" id="usluge"><div class="wrap"><h2>Naše usluge</h2><p class="lead">Od instalacija do završnih radova – sve na jednom mestu.</p><div class="cards"><article class="card"><h3>Vodovod</h3><p>Ugradnja, zamena i popravka vodovodnih instalacija.</p></article><article class="card"><h3>Kanalizacija</h3><p>Izrada i rekonstrukcija kanalizacionih instalacija.</p></article><article class="card"><h3>Grejanje</h3><p>Ugradnja i povezivanje sistema grejanja i radijatora.</p></article><article class="card"><h3>Keramika</h3><p>Postavljanje zidnih i podnih keramičkih pločica.</p></article><article class="card"><h3>Renoviranje kupatila</h3><p>Kompletna rekonstrukcija kupatila, od instalacija do završne obrade.</p></article><article class="card"><h3>Završni radovi</h3><p>Završne obrade i uređenje prostora po dogovoru.</p></article></div></div></section>
+</div><div class="wrap hero-layout"><div class="hero-brand"><img src="mk-mont-logo.jpg" alt="MK MONT Subotica – vodovod, grejanje, keramika"/></div><div class="hero-contact"><div class="hero-contact-row"><span class="contact-symbol">☎</span><a href="tel:+381691410920">069 141 0920</a></div><div class="hero-contact-row"><span class="contact-symbol">✉</span><a href="mailto:mk.mont024@gmail.com">mk.mont024@gmail.com</a></div><div class="hero-contact-row"><span class="contact-symbol">⌖</span><span>SUBOTICA</span></div><p class="hero-slogan">Vaš dom<br>u sigurnim rukama!</p><div class="actions"><a class="btn btn-red" href="tel:+381691410920">Pozovite nas</a><a class="btn btn-outline" href="#radovi">Naši radovi</a></div></div></div>
+<div class="wrap hero-services">
+  <a href="#vodovod" aria-label="Galerija radova Vodovod">
+    <span>💧</span><strong>VODOVOD</strong>
+    <small>Galerija radova</small>
+  </a>
+  <a href="#kanalizacija" aria-label="Galerija radova Kanalizacija">
+    <span>🔧</span><strong>KANALIZACIJA</strong>
+    <small>Galerija radova</small>
+  </a>
+  <a href="#grejanje" aria-label="Galerija radova Grejanje">
+    <span>♨</span><strong>GREJANJE</strong>
+    <small>Galerija radova</small>
+  </a>
+  <a href="#keramika" aria-label="Galerija radova Keramika">
+    <span>▦</span><strong>KERAMIKA</strong>
+    <small>Galerija radova</small>
+  </a>
+  <a href="#projekat-1" aria-label="Galerija renoviranja kupatila">
+    <span>🚿</span><strong>RENOVIRANJE KUPATILA</strong>
+    <small>Galerija radova</small>
+  </a>
+</div>
+</section>
 <section class="section" id="o-nama"><div class="wrap about-grid"><div><h2>O nama</h2><p>MK MONT je firma iz Subotice, osnovana 2021. godine. Bavimo se vodovodnim i kanalizacionim instalacijama, grejanjem, keramikom i kompletnim renoviranjem kupatila.</p><p>Naš cilj je kvalitetno izveden posao i jasan dogovor sa svakim klijentom.</p></div><div class="about-panel"><strong>MK MONT</strong><p>Jedan tim za instalacije, renoviranje i završne radove.</p></div></div></section>
 <section class="section section-soft" id="radovi"><div class="wrap"><h2>Naši radovi</h2><p class="lead">Svaki projekat ima svoju galeriju fotografija pre i posle radova.</p>
 <div class="projects-list">
