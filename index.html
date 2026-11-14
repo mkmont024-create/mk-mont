@@ -111,6 +111,46 @@ body.lightbox-active{overflow:hidden}
   display: none;
 }
 
+/* Uklanjanje duplog zaglavlja */
+.site-header {
+  display: none;
+}
+
+/* Klikabilni meni preko nove slike */
+.hero {
+  position: relative;
+}
+
+.site-header {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8%;
+  z-index: 10;
+  background: transparent;
+  border: 0;
+}
+
+.site-header .brand {
+  visibility: hidden;
+}
+
+.site-header .header-inner {
+  min-height: 100%;
+  height: 100%;
+}
+
+.site-header .menu {
+  margin-left: auto;
+}
+
+.site-header .menu a {
+  color: transparent;
+  font-size: 14px;
+}
+
 </style>
 </head>
 <body>
